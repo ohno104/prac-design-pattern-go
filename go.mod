@@ -1,3 +1,3 @@
-module design-pattern
+module github.com/hono104/prac-design-pattern-go
 
-go 1.19
+go 1.22.1
