@@ -1,4 +1,4 @@
-package main
+package facade
 
 // 外觀模式
 // 提供一個簡單的接口, 把子系統的複雜性隱藏起來, 容易使用
@@ -25,14 +25,10 @@ func NewFacade() *Facade {
 	}
 }
 
-func (f *Facade) Loan() {
+func (f *Facade) Loan() bool {
 	f.sales.Apply()
 	f.risk.Assess()
 	f.account.Trans()
 	fmt.Println("loan success")
-}
-
-func main() {
-	c := NewFacade()
-	c.Loan()
+	return true
 }
